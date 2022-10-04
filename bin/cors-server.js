@@ -39,6 +39,9 @@ async function main() {
     return;
   }
 
+  console.info("Prefix:", prefix);
+  console.info("Allowed Domains:", allowedHostnames.join(", "));
+
   let corsProxy = CorsProxy.create({
     prefix,
     allowedHostnames,
