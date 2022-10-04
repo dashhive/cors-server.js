@@ -2,7 +2,7 @@
 
 A simple CORS proxy server with configurable allowed domains.
 
-See `example.env` for config options.
+See [`./example.env`](./example.env) for config options.
 
 ## Install
 
