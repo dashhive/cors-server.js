@@ -1,0 +1,45 @@
+{
+  "name": "cors-server",
+  "version": "0.1.0",
+  "description": "A simple CORS proxy server with configurable allowed domains",
+  "main": "index.js",
+  "bin": {
+    "cors-server": "./bin/cors-server.js"
+  },
+  "files": [
+    "bin",
+    "index.js",
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "doc": "npx jsdoc@3.x --configure ./jsdoc.conf.json --destination ./docs --package ./package.json --readme ./README.md --access all --private --recurse ./lib/",
+    "fmt": "npx -p prettier@2.x -- prettier -w '**/*.{js,md}'",
+    "lint": "npx -p typescript@4.x -- tsc -p ./jsconfig.json",
+    "prepublish": "npx -p jswt@1.x -- reexport",
+    "start": "./bin/cors-server.js",
+    "version": "npm version -m \"chore(release): bump to v%s\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dashhive/cors-server.js.git"
+  },
+  "keywords": [
+    "CORS",
+    "proxy",
+    "server"
+  ],
+  "author": "AJ ONeal <aj@therootcompany.com> (https://throotcompany.com/)",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/dashhive/cors-server.js/issues"
+  },
+  "homepage": "https://github.com/dashhive/cors-server.js#readme",
+  "devDependencies": {
+    "@types/node": "^18.8.1"
+  },
+  "dependencies": {
+    "@root/request": "^1.9.2",
+    "dotenv": "^16.0.3"
+  }
+}
